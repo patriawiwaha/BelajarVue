@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Document</title>
+
+    <style>
+    .text-red{
+        color:red;
+    }
+    </style>
 </head>
 <body>
     
-</body>
-<script>
+    <div id="belajarvue" class="text-red">
+        {{ pesan }}
+    </div>
 
+    <div id="app-2">
+        <span v-bind:title="message">
+        Arahkan kursor pada teks ini dalam beberapa detik untuk melihat title
+        yang muncul secara dinamis. </span>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</body>
+
+<script>
+var belajarvue = new Vue({
+  el: '#belajarvue',
+  data: {
+    pesan: 'Kita Lagi Belajar loh!'
+  }
+})
+
+var app2 = new Vue({ el: '#app-2', data: {
+message: 'Halaman ini di-loaded pada ' + new Date().toLocaleString() }
+})
 </script>
+
 </html>
